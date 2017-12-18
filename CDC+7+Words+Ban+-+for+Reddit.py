@@ -1,8 +1,6 @@
 
 # coding: utf-8
 
-# In[1]:
-
 import praw #library for Reddit APIs
 import pandas as pd, numpy as np #Dataframes and easy number manipulations
 import keys #personal library of API keys for Facebook, Google, Twitter, and Reddit
@@ -13,9 +11,6 @@ import matplotlib.pyplot as plt #Plot Functions
 import time #Pause system if there are too many API requests
 import matplotlib
 from wordcloud import WordCloud #Makes a word cloud
-
-
-# In[ ]:
 
 Reddit_Data = []
 reddit = praw.Reddit(user_agent = "CDC 7 Word Ban (by /u/MedianEnergy)",
@@ -49,8 +44,6 @@ Reddit_Data = pd.DataFrame(Reddit_Data)
 Reddit_Data.columns = ['Comment', 'Score', 'Poster']
 Reddit_Data['Score'] = Reddit_Data['Score'].astype(str).astype(int)
 
-
-# In[ ]:
 
 #In Reddit, the vote feature is usually it's used to depict agree or disagreement of people
 #coming across the post. Because of that, it is a really good measure of a popular sentiment
@@ -89,9 +82,6 @@ Sentiment_list.columns = ['Sentiment']
 
 #Completed dataset for each comment on Reddit Thread
 Reddit_Data = pd.concat([Reddit_Data, Sentiment_list],axis=1)
-
-
-# In[ ]:
 
 #Explore Sentiment value with Score of post with score of over 1000 votes
 f, ax = plt.subplots(4,3,figsize=(20,15))
@@ -183,18 +173,12 @@ ax[3][2].text(0.25,-100, p)
 
 plt.show()
 
-
-# In[ ]:
-
 #Look at most common words in the reddit comments
 Word_Data_1 = Reddit_Data.groupby(["1 Common"]).sum()['Score'].sort_values(ascending=False)
 Word_Data_2 = Reddit_Data.groupby(["2 Common"]).sum()['Score'].sort_values(ascending=False)
 Word_Data_3 = Reddit_Data.groupby(["3 Common"]).sum()['Score'].sort_values(ascending=False)
 Word_Data_4 = Reddit_Data.groupby(["4 Common"]).sum()['Score'].sort_values(ascending=False)
 Word_Data_5 = Reddit_Data.groupby(["5 Common"]).sum()['Score'].sort_values(ascending=False)
-
-
-# In[ ]:
 
 #Bar graphs of how often a word was used with respect to the total vote the comment it was used in received
 f = plt.figure(figsize=(20,30))
@@ -236,9 +220,6 @@ plt.xticks(rotation=280)
 f.subplots_adjust(hspace=0.5)
 plt.show()
 
-
-# In[ ]:
-
 #In this part, I want to break the data down by poster, and look at which of them has the highest scores 
 #and their general sentiment of the ban on words. I'm going to follow that up with a breakdown of
 #what other subreddits they post on, and see if that information gives us more details about whether they
@@ -272,9 +253,6 @@ Poster_Data = [Poster_Data, Poster_Subreddits]
 Poster_Data = pd.concat(Poster_Data, axis = 1)
 Poster_Data.columns = ['Score','Sentiment','1 Subreddit','2 Subreddit','3 Subreddit']
 Poster_Data = Poster_Data.sort_values(['Score'],ascending=False)
-
-
-# In[ ]:
 
 #Creating Subreddit data for most commonly visited subreddit, 2nd most common, and 3rd most among commenters
 #Cumulative data contains the combination of the data between them
@@ -329,16 +307,14 @@ plt.ylabel("")
 f.subplots_adjust(wspace=0.5)
 plt.show()
 
-
-# In[ ]:
-
 #In the final part, I'm going to do a quick graph of the total frequency distribution of the words in every
 #comment, which should give us a picture of how everyone talked without respect to popularity, a sentiment 
 #analysis of the whole text, and a word cloud of the whole text.
 with open("CDC7wordsbancomments.txt",'r') as file:
     All_Comments = file.read().replace('\n','')
 #Sentiment of comments as a whole, no regard to popularity or person who wrote them
-sentiment(All_Comments)
+file.close()
+print(sentiment(All_Comments))
 
 #Make a word cloud
 wordcloud = WordCloud().generate(All_Comments)
