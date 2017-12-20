@@ -10,6 +10,8 @@ Chicago_Zip_Data.csv is a file of population statistics of each zipcode
 
 ChicagoSexCrimesZipCodeData.csv is a file that contains the zipcode of each location of the crime
 
+Python libraries required: pandas, numpy, scikit-learn, itertools, matplotlib, IPython.display, seaborn
+
 -------------
 
 CDC 7 Word Ban:
