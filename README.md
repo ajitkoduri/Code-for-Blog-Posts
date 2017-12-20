@@ -9,7 +9,9 @@ MP4 files are videos of the change in crime location for each specified type of 
 Chicago_Zip_Data.csv is a file of population statistics of each zipcode
 
 ChicagoSexCrimesZipCodeData.csv is a file that contains the zipcode of each location of the crime
+
 -------------
+
 CDC 7 Word Ban:
 
 CDC 7 Word Ban for Reddit.py is a file that looks over the original Reddit post in R/politics about the CDC word ban. In there,
