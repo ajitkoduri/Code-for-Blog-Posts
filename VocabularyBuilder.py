@@ -1,8 +1,3 @@
-
-# coding: utf-8
-
-# In[1]:
-
 from urllib.request import urlopen #Web browser tool
 from bs4 import BeautifulSoup #html reader tool
 import re #string parsing tool
