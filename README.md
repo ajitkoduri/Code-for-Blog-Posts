@@ -1,5 +1,15 @@
 Code I used to work on my analytical overviews in my blog.
 
+Release on: January 15, 2018
+
+Machine Novelist Project: https://github.com/ajitkoduri/Code-for-Blog-Posts/blob/ajitkoduri-patch-Machine-Novelist-Project/VocabularyBuilder.py
+
+This is a python file for me as I am creating a basic vocabulary for the machine to be able to use. I use some webscraping to gather to data (toddler level vocabulary).
+
+Python libraries required: numpy, pandas, re, bs4, urllib.request
+
+-------------
+
 Release on: Dec 25, 2017
 
 Sex Crimes in Chicago: https://ajitdoes.com/2017/12/25/sex-crimes-in-chicago/
