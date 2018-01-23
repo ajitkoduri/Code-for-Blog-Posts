@@ -1,8 +1,19 @@
 Code I used to work on my analytical overviews in my blog.
 
+Release on: January 23, 2018
+
+Machine Novelist Project: https://github.com/ajitkoduri/Code-for-Blog-Posts/tree/master/Machine%20Novelist%20Project
+
+Folder of all the work I've done on the project till date. Updated VocabularyBuilder.py to write new data files for a part of speech labeller to operate in C++ environment. CSVReader.h is a header file for C++ that decodes .csv files. TrieDS.h is another header file for C++ that has the code for creation of a trie (prefix tree) data structure for C++. Part_of_Speech_Labeller.cpp is a C++ code that uses these two header files as well as the Standard Template Library for C++ to identify words based on their part of speech using the vocabulary allocated for this file.
+
+Now that this is finished, future updates to the project will be on finding meaning in sentences and paragraphs, and using that to build meaning in sentences and paragraphs that the machine creates.
+
+
+-------------
+
 Release on: January 15, 2018
 
-Machine Novelist Project: https://github.com/ajitkoduri/Code-for-Blog-Posts/blob/ajitkoduri-patch-Machine-Novelist-Project/VocabularyBuilder.py
+Machine Novelist Project: https://github.com/ajitkoduri/Code-for-Blog-Posts/blob/master/VocabularyBuilder.py
 
 This is a python file for me as I am creating a basic vocabulary for the machine to be able to use. I use some webscraping to gather to data (toddler level vocabulary).
 
