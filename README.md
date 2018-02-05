@@ -1,3 +1,5 @@
+FUTURE RELEASES ON BLOG POSTS RELATED TO MACHINE NOVELIST PROJECT WILL BE ON SEPARATE GITHUB REPOSITORY.
+
 Code I used to work on my analytical overviews in my blog.
 
 Release on: January 23, 2018
